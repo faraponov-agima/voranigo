@@ -11,7 +11,9 @@ export function Footer() {
       contentClassName="grid gap-x-8 gap-y-12 xl:grid-cols-2 xl:gap-x-24 xl:gap-y-16"
     >
       <div>
-        <Logo className="h-10 w-auto xl:h-12" />
+        <a href="https://servier.ru/" target="_blank" rel="noopener noreferrer">
+          <Logo className="h-10 w-auto xl:h-12" />
+        </a>
       </div>
 
       <div>
@@ -27,7 +29,15 @@ export function Footer() {
             <p>АО «Сервье»:</p>
             <p>125196, Москва, ул. Лесная, д.7, этажи 7/8/9</p>
             <p>Бизнес-центр Белые Сады</p>
-            <p>Телефон: +7 495 937-07-00</p>
+            <p>
+              Телефон:{" "}
+              <a
+                href="tel:+74959370700"
+                className="hover:text-white hover:underline"
+              >
+                +7 495 937-07-00
+              </a>
+            </p>
             <a
               href="mailto:ru.communications@servier.com"
               className="hover:text-white hover:underline"
@@ -42,7 +52,15 @@ export function Footer() {
             ООО «СЕРВЬЕ РУС», 108828 г. Москва, пос. Краснопахорское, квартал
             158, вл.2, стр.1, кабинет 169
           </p>
-          <p>Тел. +7 (495) 225-80-10</p>
+          <p>
+            Тел.{" "}
+            <a
+              href="tel:+74952258010"
+              className="hover:text-white hover:underline"
+            >
+              +7 (495) 225-80-10
+            </a>
+          </p>
         </div>
       </div>
 
@@ -61,7 +79,11 @@ export function Footer() {
           asChild
           className="group w-full justify-between text-lg font-medium xl:w-auto xl:min-w-[320px]"
         >
-          <a href="#">
+          <a
+            href="https://servier.ru/#form"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span>Форма обратной связи</span>
             <ArrowRight className="size-6 transition-transform group-hover:translate-x-1" />
           </a>
@@ -71,10 +93,20 @@ export function Footer() {
       <div className="col-span-full flex flex-col justify-between gap-8  pt-8 text-xs text-gray-400 xl:flex-row xl:text-sm border-t border-white/10">
         <p>© 2025 LES LABORATOIRES SERVIER. АО «Сервье». Все права защищены</p>
         <div className="flex flex-col gap-2 xl:flex-row xl:gap-8">
-          <a href="#" className="hover:text-white">
+          <a
+            href="https://servier.ru/terms-of-use/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white"
+          >
             Условия использования
           </a>
-          <a href="#" className="hover:text-white">
+          <a
+            href="https://servier.ru/politika-v-otnoshenii-obrabotki-personalnyh-dannyh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white"
+          >
             Политика в отношении обработки персональных данных
           </a>
         </div>

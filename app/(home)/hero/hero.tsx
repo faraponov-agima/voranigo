@@ -25,7 +25,13 @@ export function Hero() {
       </FadeMask>
 
       <div className="inline-flex w-fit items-center rounded-2xl bg-white/10 px-6 py-3">
-        <Logo className="h-[30px] w-[150px]" />
+        <a
+          href="https://servier.ru/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Logo className="h-[30px] w-[150px]" />
+        </a>
       </div>
 
       <h1 className="max-w-4xl font-semibold tracking-tight text-4xl md:text-6xl mt-8 text-balance">

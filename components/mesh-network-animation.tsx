@@ -253,14 +253,29 @@ export const MeshNetworkAnimation: React.FC<MeshNetworkProps> = ({
       requestRef.current = requestAnimationFrame(animate);
     };
 
+    // Initialize canvas size
     handleResize();
-    window.addEventListener("resize", handleResize);
+
+    // Use ResizeObserver to track container size changes
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const { width: newWidth, height: newHeight } = entry.contentRect;
+        width = newWidth;
+        height = newHeight;
+        canvas.width = width;
+        canvas.height = height;
+        initParticles(width, height);
+      }
+    });
+
+    resizeObserver.observe(container);
     requestRef.current = requestAnimationFrame(animate);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      resizeObserver.disconnect();
       cancelAnimationFrame(requestRef.current);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
