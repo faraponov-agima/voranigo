@@ -10,7 +10,13 @@ const tumorTypes = [
 
 export function Hero() {
   return (
-    <Block contentClassName="flex flex-col gap-12 py-6 md:py-6 relative">
+    <Block
+      contentClassName="flex flex-col gap-12 py-6 md:py-6 relative"
+      style={{
+        background:
+          "radial-gradient(108.03% 71.03% at 54.37% 0%, #7E7BD3 0%, #6D6BBB 10%, #4A4794 25%, #2E2C5C 50%, #1E1D39 70%, #0A0A0C 100%)",
+      }}
+    >
       <FadeMask
         fadeLeft
         fadeBottom
@@ -25,16 +31,12 @@ export function Hero() {
       </FadeMask>
 
       <div className="inline-flex w-fit items-center rounded-2xl bg-white/10 px-6 py-3">
-        <a
-          href="https://servier.ru/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://servier.ru/" target="_blank" rel="noopener noreferrer">
           <Logo className="h-[30px] w-[150px]" />
         </a>
       </div>
 
-      <h1 className="max-w-4xl font-semibold tracking-tight text-4xl md:text-6xl mt-8 text-balance">
+      <h1 className="max-w-4xl font-semibold tracking-tight text-4xl md:text-6xl mt-8 text-balance text-[#EAE5FF]">
         Мутации, определяющие заболевание при диффузной глиоме у&nbsp;взрослых
       </h1>
 

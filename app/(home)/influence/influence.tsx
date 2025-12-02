@@ -27,7 +27,14 @@ export function Influence() {
   const [isSchemeOpen, setIsSchemeOpen] = useState(false);
 
   return (
-    <Block containerClassName="py-7 md:py-30" contentClassName="space-y-30">
+    <Block
+      containerClassName="py-7 md:py-30"
+      contentClassName="space-y-30"
+      style={{
+        background:
+          "var(--Background, radial-gradient(147.6% 97.06% at 50% 100%, #7E7BD3 0%, #6D6BBB 10%, #4A4794 25%, #2E2C5C 50%, #1E1D39 70%, #0A0A0C 100%))",
+      }}
+    >
       <div className="space-y-12 max-w-4xl ">
         <h1 className="font-semibold tracking-tight text-4xl md:text-6xl">
           mIDH1/2 влияет на&nbsp;патогенез опухоли начиная с&nbsp;самых ранних
@@ -43,7 +50,7 @@ export function Influence() {
         </ul>
       </div>
 
-      <div className="rounded-md bg-white/5 p-8 grid gap-30 lg:grid-cols-[3fr_2fr] lg:place-items-end relative">
+      <div className="rounded-md bg-[#33315A] p-8 grid gap-30 lg:grid-cols-[3fr_2fr] lg:place-items-end relative">
         <FadeMask
           fadeLeft
           fadeBottom
@@ -62,8 +69,8 @@ export function Influence() {
             накопление генетических поломок. Адаптировано из&nbsp;Kayabolen
             A&nbsp;et&nbsp;al
           </p>
-          <Button 
-            className="w-full lg:hidden" 
+          <Button
+            className="w-full lg:hidden"
             size="lg"
             onClick={() => setIsSchemeOpen(true)}
           >
@@ -73,7 +80,7 @@ export function Influence() {
       </div>
 
       <SchemeViewer open={isSchemeOpen} onOpenChange={setIsSchemeOpen}>
-        <div className="bg-background/90 p-16 rounded-3xl">
+        <div className="bg-[#33315A] p-16 rounded-3xl">
           <Scheme className="w-[800px] h-auto" />
         </div>
       </SchemeViewer>

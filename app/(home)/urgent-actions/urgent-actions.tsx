@@ -4,7 +4,13 @@ import { MeshNetworkAnimation } from "@/components/mesh-network-animation";
 
 export function UrgentActions() {
   return (
-    <Block contentClassName="flex flex-col gap-12 text-white py-30 md:py-30 relative">
+    <Block
+      contentClassName="flex flex-col gap-12 text-white py-30 md:py-30 relative"
+      style={{
+        background:
+          "var(--Background, radial-gradient(147.6% 97.06% at 50% 100%, #7E7BD3 0%, #6D6BBB 10%, #4A4794 25%, #2E2C5C 50%, #1E1D39 70%, #0A0A0C 100%))",
+      }}
+    >
       <FadeMask
         fadeLeft
         fadeRight
