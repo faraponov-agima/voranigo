@@ -87,19 +87,45 @@ export function Hero() {
             диффузной глиомы у&nbsp;взрослых пациентов
             <sup>1</sup>.
           </p>
-          <div className="space-y-8">
-            <p>
+          <div>
+            <p className="mb-8 relative z-10">
               Согласно классификации ВОЗ 2021&nbsp;года, выделяют 2&nbsp;типа
               диффузной глиомы с&nbsp;мутацией IDH
               <sup>1</sup>.
             </p>
-            <ul className="pl-10 space-y-5">
-              {tumorTypes.map((type) => (
-                <li key={type} className="flex gap-3">
-                  <span>{type}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="relative overflow-hidden pt-5 -mt-5">
+              <ul className="pl-10 space-y-5">
+                {tumorTypes.map((type, index) => {
+                  const isLast = index === tumorTypes.length - 1;
+                  return (
+                    <li key={type} className="flex gap-3 relative">
+                      <span
+                        aria-hidden="true"
+                        className={`absolute border-dashed border-[#EAE5FF]/40 pointer-events-none ${
+                          isLast
+                            ? "border-l-[3px] border-b-[3px] rounded-bl-2xl"
+                            : "border-b-[3px]"
+                        }`}
+                        style={{
+                          left: "-1.75rem",
+                          width: "1.5rem",
+                          ...(isLast
+                            ? {
+                                top: "-1000px",
+                                height: "calc(1000px + 0.75em)",
+                              }
+                            : {
+                                top: "0.6em",
+                                height: "0px",
+                              }),
+                        }}
+                      />
+                      <span>{type}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
           <p>
             В&nbsp;ведущих клинических рекомендациях по&nbsp;нейроонкологии,

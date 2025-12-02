@@ -46,17 +46,45 @@ export function HighLevel() {
             Повышенный уровень 2-ГГ&nbsp;— движущая сила онкогенеза при
             диффузной глиоме mIDH1/2
           </h1>
-          <p>
-            mIDH1/2 и&nbsp;повышенный уровень 2-ГГ влияют на&nbsp;множество
-            процессов на уровне опухолевых клеток, включая <sup>10, 19-27</sup>:
-          </p>
-          <ul className="space-y-5 pl-10">
-            {listItems.map((item, index) => (
-              <li key={index} className="flex gap-3">
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          <div>
+            <p className="mb-8 relative z-10">
+              mIDH1/2 и&nbsp;повышенный уровень 2-ГГ влияют на&nbsp;множество
+              процессов на уровне опухолевых клеток, включая <sup>10, 19-27</sup>:
+            </p>
+            <div className="relative overflow-hidden pt-5 -mt-5">
+              <ul className="pl-10 space-y-5">
+                {listItems.map((item, index) => {
+                  const isLast = index === listItems.length - 1;
+                  return (
+                    <li key={index} className="flex gap-3 relative">
+                      <span
+                        aria-hidden="true"
+                        className={`absolute border-dashed border-foreground/40 pointer-events-none ${
+                          isLast
+                            ? "border-l-[3px] border-b-[3px] rounded-bl-2xl"
+                            : "border-b-[3px]"
+                        }`}
+                        style={{
+                          left: "-1.75rem",
+                          width: "1.5rem",
+                          ...(isLast
+                            ? {
+                                top: "-1000px",
+                                height: "calc(1000px + 0.75em)",
+                              }
+                            : {
+                                top: "0.6em",
+                                height: "0px",
+                              }),
+                        }}
+                      />
+                      <span>{item}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
           <p>
             2-Гидроксиглутарат имеет некоторое химическое сходство
             с&nbsp;глутаматом (нейро- медиатор). Таким образом, избыточное

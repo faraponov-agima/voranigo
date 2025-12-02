@@ -36,18 +36,45 @@ export function Influence() {
       }}
     >
       <div className="space-y-12 max-w-4xl ">
-        <h1 className="font-semibold tracking-tight text-4xl md:text-6xl">
-          mIDH1/2 влияет на&nbsp;патогенез опухоли начиная с&nbsp;самых ранних
-          этапов развития диффузной глиомы
-        </h1>
-
-        <ul className="space-y-5 pl-10">
-          {listItems.map((item, index) => (
-            <li key={index} className="flex gap-3">
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <h1 className="font-semibold tracking-tight text-4xl md:text-6xl mb-8 relative z-10">
+            mIDH1/2 влияет на&nbsp;патогенез опухоли начиная с&nbsp;самых ранних
+            этапов развития диффузной глиомы
+          </h1>
+          <div className="relative overflow-hidden pt-5 -mt-5">
+            <ul className="pl-10 space-y-5">
+              {listItems.map((item, index) => {
+                const isLast = index === listItems.length - 1;
+                return (
+                  <li key={index} className="flex gap-3 relative">
+                    <span
+                      aria-hidden="true"
+                      className={`absolute border-dashed border-[#EAE5FF]/40 pointer-events-none ${
+                        isLast
+                          ? "border-l-[3px] border-b-[3px] rounded-bl-2xl"
+                          : "border-b-[3px]"
+                      }`}
+                      style={{
+                        left: "-1.75rem",
+                        width: "1.5rem",
+                        ...(isLast
+                          ? {
+                              top: "-1000px",
+                              height: "calc(1000px + 0.75em)",
+                            }
+                          : {
+                              top: "0.6em",
+                              height: "0px",
+                            }),
+                      }}
+                    />
+                    <span>{item}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div className="rounded-md bg-[#33315A] p-8 grid gap-30 lg:grid-cols-[3fr_2fr] lg:place-items-end relative">
