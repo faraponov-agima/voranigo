@@ -81,7 +81,7 @@ export function Influence() {
         <FadeMask
           fadeLeft
           fadeBottom
-          className="absolute right-0 top-0 w-[50%] h-[100%]"
+          className="absolute right-0 top-0 w-[50%] h-full z-0"
         >
           <MeshNetworkAnimation
             color="#ffffff"
@@ -89,7 +89,7 @@ export function Influence() {
             particleCount={8}
           />
         </FadeMask>
-        <Scheme className="max-w-full" />
+        <Scheme className="max-w-full relative z-1" />
         <div className="flex flex-col gap-10">
           <p className="text-lg">
             Схема: Многоэтапное прогрессирование глиомы с&nbsp;мутацией IDH и
