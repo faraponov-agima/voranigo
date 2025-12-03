@@ -21,12 +21,12 @@ export function Hero() {
         fadeLeft
         fadeBottom
         fadeRight
-        className="absolute right-0 top-0 aspect-[2] w-[35%]"
+        className="absolute right-0 top-0 aspect-[2] w-[70%]"
       >
         <MeshNetworkAnimation
           color="#ffffff"
-          connectionDistance={300}
-          particleCount={8}
+          connectionDistance={600}
+          particleCount={4}
         />
       </FadeMask>
 

@@ -17,11 +17,11 @@ export function Classification() {
         <FadeMask
           fadeLeft
           fadeBottom
-          className="absolute right-0 top-0 aspect-square w-[25%]"
+          className="absolute right-0 top-0 aspect-square w-[50%]"
         >
           <MeshNetworkAnimation
             color="#000000"
-            connectionDistance={300}
+            connectionDistance={600}
             particleCount={8}
           />
         </FadeMask>

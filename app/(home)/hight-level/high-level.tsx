@@ -98,12 +98,12 @@ export function HighLevel() {
         <FadeMask
           fadeLeft
           fadeBottom
-          className="absolute right-0 top-0 aspect-square w-[25%]"
+          className="absolute right-0 top-0 aspect-square w-[50%]"
         >
           <MeshNetworkAnimation
             color="#000000"
-            connectionDistance={300}
-            particleCount={8}
+            connectionDistance={600}
+            particleCount={6}
           />
         </FadeMask>
         <Scheme className="max-w-full" />

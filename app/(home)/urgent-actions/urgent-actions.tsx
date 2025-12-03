@@ -15,24 +15,24 @@ export function UrgentActions() {
         fadeLeft
         fadeRight
         fadeBottom
-        className="absolute right-0 top-0 aspect-square w-[25%]"
+        className="absolute right-0 top-0 aspect-square w-[50%]"
       >
         <MeshNetworkAnimation
           color="#ffffff"
-          connectionDistance={200}
-          particleCount={16}
+          connectionDistance={400}
+          particleCount={8}
         />
       </FadeMask>
       <FadeMask
         fadeLeft
         fadeRight
         fadeTop
-        className="absolute right-0 bottom-0 aspect-square w-[25%]"
+        className="absolute right-0 bottom-0 aspect-square w-[50%]"
       >
         <MeshNetworkAnimation
           color="#ffffff"
-          connectionDistance={200}
-          particleCount={16}
+          connectionDistance={400}
+          particleCount={8}
         />
       </FadeMask>
       <div className="max-w-4xl space-y-30 text-balance">

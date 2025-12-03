@@ -81,11 +81,11 @@ export function Influence() {
         <FadeMask
           fadeLeft
           fadeBottom
-          className="absolute right-0 top-0 aspect-square w-[25%]"
+          className="absolute right-0 top-0 w-[50%] h-[100%]"
         >
           <MeshNetworkAnimation
             color="#ffffff"
-            connectionDistance={300}
+            connectionDistance={600}
             particleCount={8}
           />
         </FadeMask>
