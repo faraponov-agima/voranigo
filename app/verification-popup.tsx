@@ -30,7 +30,7 @@ export function VerificationPopup() {
 
   const handleReject = () => {
     // Redirect or show rejection message
-    window.location.href = "https://google.com";
+    window.location.href = "https://servier.ru/";
   };
 
   return (
