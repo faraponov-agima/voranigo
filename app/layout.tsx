@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Вораниго",
+  title: "Глиома",
   icons: {
     icon: "/info/glioma/favicon.ico",
   },
