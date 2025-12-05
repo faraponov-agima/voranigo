@@ -44,7 +44,7 @@ export function Hero() {
         <div className="max-w-2xl mx-auto relative">
           <video
             className="h-full mix-blend-lighten"
-            src="/hero.mp4"
+            src="/info/glioma/hero.mp4"
             playsInline
             autoPlay
             muted
